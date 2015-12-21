@@ -77,7 +77,7 @@ public class UpdateHotelAdminHomeServlet extends HttpServlet {
 						"	<div id=searchmenu>"  +
 						"		<form action=/updatehoteladmin method='get'>" +
 						"			<dt>施設を選んで下さい。" +
-						"					<dt><select name ='hotelKeyString' size=3 required style='width:190px;' >" +
+						"					<dt><select name ='hotelKeyString'  required style='width:190px;' >" +
 						"						<option value='Choose' disabled selected>Choose . . .</option>");
 				for (int j=0; j<hotelNames_j.size(); j++){
 					pw.println("<option value=" + hotelKeys.get(j) + ">" + hotelNames_j.get(j) + "</option>");
@@ -87,7 +87,7 @@ public class UpdateHotelAdminHomeServlet extends HttpServlet {
 						"		</form>	" + 
 						"		<form action=/updatehoteladmin method='get'>" +
 						"			<dt>Choose an accomodation:" +
-						"					<dt><select name ='hotelKeyString' size=3 required style='width:190px;' >" +
+						"					<dt><select name ='hotelKeyString' required style='width:190px;' >" +
 						"						<option value='Choose' disabled selected>Choose . . .</option>");
 				for (int j=0; j<hotelNames.size(); j++){
 					pw.println("<option value=" + hotelNames.get(j) + ">" + hotelNames.get(j) + "</option>");
