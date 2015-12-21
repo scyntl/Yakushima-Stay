@@ -158,28 +158,34 @@ public class UpdateWelcomingServlet extends HttpServlet {
 					hotel.setProperty("smoking", Arrays.asList(smokingcontent));
 
 					if (tmp2.contains("NonSmoking Rooms Only")){
-						smokingstring="NonSmoking rooms only.";
-						smokingstring_j="全室は禁煙";
+						smokingstring="NonSmoking rooms only. ";
+						smokingstring_j="全室は禁煙。";
 						smokingno="checked";
 					}
 					if (tmp2.contains("Smoking Rooms Only")){
-						smokingstring="Smoking allowed in all rooms.";
-						smokingstring_j="全室は喫煙可";
+						smokingstring="Smoking allowed in all rooms. ";
+						smokingstring_j="全室は喫煙可。";
 						smokingyes="checked";
 					}
 					if (tmp2.contains("Smoking and Nonsmoking Rooms")){
-						smokingstring="Smoking and nonsmoking rooms available.";
+						smokingstring="Smoking and nonsmoking rooms available. ";
 						smokingstring_j="喫煙と禁煙の部屋はあります。";
 						smokingboth="checked";
 					}
+					
+
+					String smokingdetailscontent = htmlFilter(request.getParameter("smokingdetails"));
+					String smokingdetailscontent_j = htmlFilter(request.getParameter("smokingdetails_j"));
+					smokingstring=smokingstring+smokingdetailscontent;
+					smokingstring_j=smokingstring_j+smokingdetailscontent_j;
+
+					hotel.setProperty("smokingdetails", smokingdetailscontent);
+					hotel.setProperty("smokingdetails_j", smokingdetailscontent_j);
 					hotel.setProperty("smokingstring", smokingstring);
 					hotel.setProperty("smokingstring_j", smokingstring_j);
 					hotel.setProperty("smokingyes", smokingyes);
 					hotel.setProperty("smokingno", smokingno);
 					hotel.setProperty("smokingboth", smokingboth);
-					
-					
-					
 
 					/*Update room types.*/
 					String roomtypesstring=" ";

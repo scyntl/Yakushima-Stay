@@ -210,6 +210,8 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 					String smokingyes=  Filternulls(hotel, "smokingyes");
 					String smokingno=  Filternulls(hotel, "smokingno");
 					String smokingboth=  Filternulls(hotel, "smokingboth");
+					String smokingdetails=  (String) hotel.getProperty("smokingdetails");
+					String smokingdetails_j=  (String) hotel.getProperty("smokingdetails_j");
 					String roomtypesjapanese=  Filternulls(hotel, "roomtypesjapanese");
 					String roomtypeswestern=  Filternulls(hotel, "roomtypeswestern");
 					String roomtypessingle=  Filternulls(hotel, "roomtypessingle");
@@ -512,9 +514,9 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 							"						Tagline:<br>" +
 							"						<input type=hidden name=permissions value='administrator'> " +
 							"						<input type=hidden name=hotelKeyString value=" + hotelKeyString + " > " +
-							"						<textarea name='tagline' rows='1' cols='60' maxlength=60 style='resize: none;' >" + tagline + " </textarea>" +
+							"						<textarea name='tagline' rows='1' cols='60' maxlength=120 style='resize: none;' >" + tagline + " </textarea>" +
 							"						<br>Tagline (Japanese):<br>" +
-							"						<textarea name='tagline_j' rows='1' cols='60' maxlength=60 style='resize: none;' >" + tagline_j + " </textarea>" +
+							"						<textarea name='tagline_j' rows='1' cols='60' maxlength=120 style='resize: none;' >" + tagline_j + " </textarea>" +
 							"						<br><input type='submit' value='Update Tag-Line'>" +
 							"					</div>" +
 							"				</form>" +
@@ -549,11 +551,11 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 					"					<input type='submit' value='Change PIN'></dd>" +
 					"					</form>" +	
 					"					<h3>Edit Hotel Data</h3>" +
-					"					<form accept-charset='utf-16' id=mapcodeform action='/updatemapcode' method='post' style='height:140px;' >" +
+					"					<form accept-charset='utf-16' id=mapcodeform action='/updatemapcode' method='post' style='height:400px;' >" +
 					"					<dt>Update MapCode:<br>" +
 					"					<input type=hidden name=permissions value='administrator'> " +
 					"					<input type=hidden name=hotelKeyString value=" + hotelKeyString + " >" +
-					"			Map Code: <br><textarea name=mapcode cols=50 rows=4> " + mapcode + " </textarea>" +
+					"			Map Code: <br><textarea name=mapcode cols=60 rows=15> " + mapcode + " </textarea>" +
 					"					<input type=hidden name=oldmapcode value='"+mapcode+"' >" +
 					"					<input type='submit' value='Update Map Code'>" +
 					"					</form>" +						
@@ -774,9 +776,9 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 					"							<input id=roomwifi type='checkbox' name='roomamenities' value='Wifi'" + roomwifi + ">Wifi<br>" +
 					"					</table>" +
 					"					Others:<br>" +
-					"					<textarea name=roomotheramenities  rows='1' cols='60' maxlength=60 style='resize: none;' >" + roomotheramenities + "</textarea>" +
+					"					<textarea name=roomotheramenities  rows='1' cols='60' maxlength=120 style='resize: none;' >" + roomotheramenities + "</textarea>" +
 					"					<br>Others in Japanese:<br>" +
-					"					<textarea name=roomotheramenities_j  rows='1' cols='60' maxlength=60 style='resize: none;' >" + roomotheramenities_j + "</textarea>" +
+					"					<textarea name=roomotheramenities_j  rows='1' cols='60' maxlength=120 style='resize: none;' >" + roomotheramenities_j + "</textarea>" +
 					"					<p><dt> Current List: <dd>" + roomamenitiesstring + "</dd>" +
 					"					<dt> (Japanese): <dd>" + roomamenitiesstring_j + "</dd>" +
 					"					<br><input type='submit' value='Update Inroom Amenities' />" +
@@ -862,6 +864,8 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 					"							<input id=nonsmokingrooms type='radio' name='smoking' value='NonSmoking Rooms Only'" + smokingno + ">NonSmoking Rooms Only<br> " +
 					"							<input id=smokingrooms type='radio' name='smoking' value='Smoking Rooms Only'" + smokingyes + ">Smoking Rooms Only<br>" +
 					"							<input id=bothrooms type='radio' name='smoking' value='Smoking and Nonsmoking Rooms'" + smokingboth + ">Smoking and Nonsmoking Rooms" +
+					"							<tr><td colspan=3>Details in English:<br><textarea name=smokingdetails  rows='1' cols='50' maxlength=120 style='resize: none;' >" + smokingdetails + "</textarea>" +
+					"							<tr><td colspan=3>Details in Japanese:<br><textarea name=smokingdetails_j  rows='1' cols='50' maxlength=120 style='resize: none;' >" + smokingdetails_j + "</textarea>" +
 					"						<tr>" +
 					"						<td><input type='hidden' name='roomtypes' value=''> " +
 					"							<input id=roomtypesjapanese type='checkbox' name='roomtypes' value='Japanese Rooms'" + roomtypesjapanese + ">Japanese Rooms<br>" +
@@ -877,9 +881,9 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 					"							<input id=roomtypessquattoilets type='checkbox' name='roomtypes' value='Squat Toilets'" + roomtypessquattoilets + ">Squat Toilets<br>" +
 					"					</table>" +
 					"					Others:<br>" +
-					"					<textarea name=otherroomtypes  rows='1' cols='60' maxlength=60 style='resize: none;' >" + otherroomtypes + "</textarea>" +
+					"					<textarea name=otherroomtypes  rows='1' cols='60' maxlength=120 style='resize: none;' >" + otherroomtypes + "</textarea>" +
 					"					<br>Others in Japanese:<br>" +
-					"					<textarea name=otherroomtypes_j  rows='1' cols='60' maxlength=60 style='resize: none;' >" + otherroomtypes_j + "</textarea>" +
+					"					<textarea name=otherroomtypes_j  rows='1' cols='60' maxlength=120 style='resize: none;' >" + otherroomtypes_j + "</textarea>" +
 					"					<br> <input type='submit' value='Update Welcoming' />" +
 					"				</form>" +
 					"				<form class=amenitiesform id=closetoform action='/updateclose'" +
