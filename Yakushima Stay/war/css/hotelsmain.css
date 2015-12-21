@@ -1,0 +1,236 @@
+
+#bigcontainer{
+	position:relative;
+   	margin-left:auto;
+  	margin-right:auto;
+  	width:1000px;
+}
+#bigbanner{
+	background-image:url("/images/Splash.png");
+	width:1000px;
+	height:150px;
+	font-size:.9em;
+	color:green;
+   	font-family: 'Marcellus', serif;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#bigbanner_j{
+	background-image:url("/images/Splash_j.png");
+	width:1000px;
+	height:150px;
+	font-size:.9em;
+	color:green;
+   	font-family: 'Marcellus', serif;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#searchmenu{
+	background-color:;
+	width:200px;
+	height:800px;
+	font-size:.9em;
+ 	font-family: 'Marcellus', serif;
+ 	position:absolute;
+ 	top:150px;
+ 	left:0px;
+ 	padding: 5px 0px 0px 0px;
+	
+}
+
+#searchmenu{
+	background-color:;
+	width:220px;
+	height:680px;
+	font-size:.9em;
+ 	font-family: 'Marcellus', serif;
+ 	position:absolute;
+ 	top:150px;
+ 	left:0px;
+	
+}
+#centercontainer{
+	background-color:;
+	width:542px;
+	height:700px;
+	font-size:.9em;
+ 	font-family: 'Marcellus', serif;
+ 	position: absolute;
+ 	top:150px;
+ 	left:230px;
+}
+#dir{
+	background-color: white;
+	width: 542px;
+	height: 70px;
+	font-size:15px;
+ 	font-family: 'Marcellus', serif;
+ 	position: relative;
+ 	top:0px;
+ 	left:0px;
+ 	padding:5px 0px 5px 5px;
+    vertical-align: middle;
+    display: table-cell;
+	
+}
+
+#dirform{
+	height: 95px;
+	width: 532px;
+	position:relative;
+	top:0px;
+	left:-5px;
+	margin-left:0px;
+	
+	
+}
+#searchparams{
+	position: relative;
+	top: 0px;
+	left: 15px;
+}
+
+#results{
+	position:absoute;
+	top:0px;
+	left:0px;
+	width: 542px;
+	background-color:;
+}
+#amenities{
+	position:relative;
+	top:0px;
+	left:0px;
+	width: 542px;
+	background-color:;
+}
+#outline{
+	position:relative;
+	top:0px;
+	left:0px;
+	width: 542px;
+	background-color:;
+}
+#tagline{
+	position:relative;
+	top:0px;
+	left:0px;
+	width: 542px;
+	height:38px;
+ 	padding:5px 0px 0px 0px;
+ 	margin-left:auto;
+ 	margin-right:auto;
+ 	text-align:center;
+ 	font-style:italic;
+}
+#photobox{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:542px;
+	height:450px;
+	background-color:white;
+	font-size:1.2em;
+	text-align: center;
+}
+#photobox2{
+	position:relative;
+	top:0px;
+	left:0px;
+	width:542px;
+	background-color:white;
+	font-size:1.2em;
+	text-align: left;
+}
+picture{
+	 border-radius:25px;
+	 box-shadow: 8px 8px 4px #888888;
+}
+
+#photoboxform{
+ 	padding:5px 10px 10px 10px;
+	width:520px;
+}
+form{
+	-moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+   	border-radius: 10px;
+    background: #e7d5b2;
+    border: 1px solid #216130;
+    padding:0px 4px;
+}
+#hotellogo{
+	width:200px;
+	height:80px;
+	margin:10px 0px;
+   	margin-left:10px;
+  	margin-right:auto;
+}
+#hotellogo img{
+	height:80px;
+}	
+#basics{
+	background-color:white;
+	width:320px;
+	height:700px;
+	font-size:.9em;
+ 	font-family: 'Marcellus', serif;
+ 	position: absolute;
+ 	top:150px;
+ 	left:782px;
+ 	padding:5px 2px 15px 2px;
+}
+#reviewbox{
+	background-color:white;
+	width:220px;
+	height:700px;
+	font-size:.9em;
+ 	font-family: 'Marcellus', serif;
+ 	padding:5px 2px 15px 2px;
+}
+#basicsform{
+	padding:0px 4px;
+}
+#footer{
+	background-color:white;
+	width:542px;
+	height:20px;
+	font-size:.9em;
+ 	font-family: 'Marcellus', serif;
+ 	position: relative;
+ 	top:0px;
+ 	left:0px;
+ 	padding:5px 2px 15px 2px;
+}
+
+.bold{
+	font-weight:bold;
+}
+#languageselection{
+	position:relative;
+	left:0px;
+	top:115px;
+	height:30px;
+}
+td.languagebutton a:link, td.languagebutton a:link{
+	width:98px;
+	height:30px;
+	color:black;
+	background-image:url("/images/button.gif");
+	text-align:center;
+	font-size:1.3em;
+	text-decoration:none;
+	font-weight:normal;
+	padding:2px 18px 2px 18px;
+
+}
+
+table td{
+	vertical-align:top;
+}
+h3{
+	font-size:1em;
+	margin:2px 0px;	
+}
