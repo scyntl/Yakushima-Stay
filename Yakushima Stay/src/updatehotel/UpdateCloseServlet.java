@@ -103,6 +103,7 @@ public class UpdateCloseServlet extends HttpServlet {
 					hotel.setProperty("closerestaurant", checkrestaurant);
 					hotel.setProperty("closepost", checkpost);
 
+					String time0j = "目の前です！";
 					String time1j = "5分以下";
 					String time2j = "5分~10分";
 					String time3j = "10分~15分";
@@ -180,103 +181,153 @@ public class UpdateCloseServlet extends HttpServlet {
 					}
 					String busstoptime = request.getParameter("busstoptime");
 					hotel.setProperty("busstoptime", busstoptime);
+					if (busstoptime.equals("right there!")) {
+						hotel.setProperty("busstoptime0", "selected"); 
+						hotel.setProperty("busstoptime5", ""); 
+						hotel.setProperty("busstoptime10", "");
+						hotel.setProperty("busstoptime15", "");
+						busstoptime_j=time0j;
+					}
 					if (busstoptime.equals("under 5 min")) {
+						hotel.setProperty("busstoptime0", "");
 						hotel.setProperty("busstoptime5", "selected"); 
 						hotel.setProperty("busstoptime10", "");
-						hotel.setProperty("busstoptime10", "");
+						hotel.setProperty("busstoptime15", "");
 						busstoptime_j=time1j;
 					}
 					else if (busstoptime.equals("5~10 min")) {
-						hotel.setProperty("busstoptime10", "selected"); 
+						hotel.setProperty("busstoptime0", "");
 						hotel.setProperty("busstoptime5", "");
+						hotel.setProperty("busstoptime10", "selected"); 
 						hotel.setProperty("busstoptime15", "");
 						busstoptime_j=time2j;;
 					}
 					else if (busstoptime.equals("10~15 min")) {
-						hotel.setProperty("busstoptime15", "selected"); 
+						hotel.setProperty("busstoptime0", "");
 						hotel.setProperty("busstoptime5", "");
 						hotel.setProperty("busstoptime10", "");
+						hotel.setProperty("busstoptime15", "selected"); 
 						busstoptime_j=time3j;
 					}
 					String supermarkettime = request.getParameter("supermarkettime");
 					hotel.setProperty("supermarkettime", supermarkettime);
-					if (supermarkettime.equals("under 5 min")) {
+					if (supermarkettime.equals("right here!")) {
+						hotel.setProperty("supermarkettime0", "selected"); 
+						hotel.setProperty("supermarkettime5", ""); 
+						hotel.setProperty("supermarkettime10", "");
+						hotel.setProperty("supermarkettime15", "");
+						supermarkettime_j=time0j;
+					}
+					else if (supermarkettime.equals("under 5 min")) {
+						hotel.setProperty("supermarkettime0", ""); 
 						hotel.setProperty("supermarkettime5", "selected"); 
 						hotel.setProperty("supermarkettime10", "");
-						hotel.setProperty("supermarkettime10", "");
+						hotel.setProperty("supermarkettime15", "");
 						supermarkettime_j=time1j;
 					}
 					else if (supermarkettime.equals("5~10 min")) {
-						hotel.setProperty("supermarkettime10", "selected"); 
+						hotel.setProperty("supermarkettime0", ""); 
 						hotel.setProperty("supermarkettime5", "");
+						hotel.setProperty("supermarkettime10", "selected"); 
 						hotel.setProperty("supermarkettime15", "");
 						supermarkettime_j=time2j;
 					}
 					else if (supermarkettime.equals("10~15 min")) {
-						hotel.setProperty("supermarkettime15", "selected"); 
+						hotel.setProperty("supermarkettime0", ""); 
 						hotel.setProperty("supermarkettime5", "");
 						hotel.setProperty("supermarkettime10", "");
+						hotel.setProperty("supermarkettime15", "selected"); 
 						supermarkettime_j=time3j;
 					}
 					String conveniencestoretime = request.getParameter("conveniencestoretime");
 					hotel.setProperty("conveniencestoretime", conveniencestoretime);
-					if (conveniencestoretime.equals("under 5 min")) {
+					if (conveniencestoretime.equals("right here!")) {
+						hotel.setProperty("conveniencestoretime0", "selected"); 
+						hotel.setProperty("conveniencestoretime5", ""); 
+						hotel.setProperty("conveniencestoretime10", "");
+						hotel.setProperty("conveniencestoretime15", "");
+						conveniencestoretime_j=time0j;
+					}
+					else if (conveniencestoretime.equals("under 5 min")) {
+						hotel.setProperty("conveniencestoretime0", ""); 
 						hotel.setProperty("conveniencestoretime5", "selected"); 
 						hotel.setProperty("conveniencestoretime10", "");
-						hotel.setProperty("conveniencestoretime10", "");
+						hotel.setProperty("conveniencestoretime15", "");
 						conveniencestoretime_j=time1j;
 					}
 					else if (conveniencestoretime.equals("5~10 min")) {
-						hotel.setProperty("conveniencestoretime10", "selected"); 
+						hotel.setProperty("conveniencestoretime0", ""); 
 						hotel.setProperty("conveniencestoretime5", "");
+						hotel.setProperty("conveniencestoretime10", "selected"); 
 						hotel.setProperty("conveniencestoretime15", "");
 						conveniencestoretime_j=time2j;
 					}
 					else if (conveniencestoretime.equals("10~15 min")) {
-						hotel.setProperty("conveniencestoretime15", "selected"); 
+						hotel.setProperty("conveniencestoretime0", "");
 						hotel.setProperty("conveniencestoretime5", "");
 						hotel.setProperty("conveniencestoretime10", "");
+						hotel.setProperty("conveniencestoretime15", "selected"); 
 						conveniencestoretime_j=time3j;
 					}
 					String restauranttime = request.getParameter("restauranttime");
 					hotel.setProperty("restauranttime", restauranttime);
-					if (restauranttime.equals("under 5 min")) {
+					if (restauranttime.equals("right there!")) {
+						hotel.setProperty("restauranttime0", "selected"); 
+						hotel.setProperty("restauranttime5", ""); 
+						hotel.setProperty("restauranttime10", "");
+						hotel.setProperty("restauranttime15", "");
+						restauranttime_j=time0j;
+					}
+					else if (restauranttime.equals("under 5 min")) {
+						hotel.setProperty("restauranttime0", ""); 
 						hotel.setProperty("restauranttime5", "selected"); 
 						hotel.setProperty("restauranttime10", "");
-						hotel.setProperty("restauranttime10", "");
+						hotel.setProperty("restauranttime15", "");
 						restauranttime_j=time1j;
 					}
 					else if (restauranttime.equals("5~10 min")) {
-						hotel.setProperty("restauranttime10", "selected"); 
+						hotel.setProperty("restauranttime0", ""); 
 						hotel.setProperty("restauranttime5", "");
+						hotel.setProperty("restauranttime10", "selected"); 
 						hotel.setProperty("restauranttime15", "");
 						restauranttime_j=time2j;
 					}
 					else if (restauranttime.equals("10~15 min")) {
-						hotel.setProperty("restauranttime15", "selected"); 
+						hotel.setProperty("restauranttime0", ""); 
 						hotel.setProperty("restauranttime5", "");
 						hotel.setProperty("restauranttime10", "");
+						hotel.setProperty("restauranttime15", "selected"); 
 						restauranttime_j=time3j;
 					}
 
 					String posttime = request.getParameter("posttime");
 					hotel.setProperty("posttime", posttime);
-					if (posttime.equals("under 5 min")) {
+					if (posttime.equals("right here!")) {
+						hotel.setProperty("posttime0", "selected"); 
+						hotel.setProperty("posttime5", ""); 
+						hotel.setProperty("posttime10", "");
+						hotel.setProperty("posttime15", "");
+						posttime_j=time0j;
+					}
+					else if (posttime.equals("under 5 min")) {
+						hotel.setProperty("posttime0", ""); 
 						hotel.setProperty("posttime5", "selected"); 
 						hotel.setProperty("posttime10", "");
-						hotel.setProperty("posttime10", "");
+						hotel.setProperty("posttime15", "");
 						posttime_j=time1j;
 					}
 					else if (posttime.equals("5~10 min")) {
-						hotel.setProperty("posttime10", "selected"); 
+						hotel.setProperty("posttime0", ""); 
 						hotel.setProperty("posttime5", "");
+						hotel.setProperty("posttime10", "selected"); 
 						hotel.setProperty("posttime15", "");
 						posttime_j=time2j;
 					}
 					else if (posttime.equals("10~15 min")) {
-						hotel.setProperty("posttime15", "selected"); 
+						hotel.setProperty("posttime0", ""); 
 						hotel.setProperty("posttime5", "");
 						hotel.setProperty("posttime10", "");
+						hotel.setProperty("posttime15", "selected"); 
 						posttime_j=time3j;
 					}            
 

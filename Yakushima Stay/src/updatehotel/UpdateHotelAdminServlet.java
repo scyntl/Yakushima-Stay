@@ -268,20 +268,25 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 					String airporttime5=  Filternulls(hotel, "airporttime5");
 					String airporttime10=  Filternulls(hotel, "airporttime10");
 					String airporttime15=  Filternulls(hotel, "airporttime15");
+					String busstoptime0=  Filternulls(hotel, "busstoptime0");
 					String busstoptime5=  Filternulls(hotel, "busstoptime5");
 					String busstoptime10=  Filternulls(hotel, "busstoptime10");
 					String busstoptime15=  Filternulls(hotel, "busstoptime15");
 					String busstopname=  Filternulls(hotel, "busstopname");
 					String busstopname_j=  Filternulls(hotel, "busstopname_j");
+					String supermarkettime0=  Filternulls(hotel, "supermarkettime0");
 					String supermarkettime5=  Filternulls(hotel, "supermarkettime5");
 					String supermarkettime10=  Filternulls(hotel, "supermarkettime10");
 					String supermarkettime15=  Filternulls(hotel, "supermarkettime15");
+					String restauranttime0=  Filternulls(hotel, "restauranttime0");
 					String restauranttime5=  Filternulls(hotel, "restauranttime5");
 					String restauranttime10=  Filternulls(hotel, "restauranttime10");
 					String restauranttime15=  Filternulls(hotel, "restauranttime15");
+					String conveniencestoretime0=  Filternulls(hotel, "conveniencestoretime0");
 					String conveniencestoretime5=  Filternulls(hotel, "conveniencestoretime5");
 					String conveniencestoretime10=  Filternulls(hotel, "conveniencestoretime10");
 					String conveniencestoretime15=  Filternulls(hotel, "conveniencestoretime15");
+					String posttime0=  Filternulls(hotel, "posttime0");
 					String posttime5=  Filternulls(hotel, "posttime5");
 					String posttime10=  Filternulls(hotel, "posttime10");
 					String posttime15=  Filternulls(hotel, "posttime15");
@@ -905,32 +910,37 @@ public class UpdateHotelAdminServlet extends HttpServlet {
 					"								</select> )<br> " +
 					"							<input id=closebus type='checkbox' name='close' value='Bus Stop'" + closebus + ">Bus-Stop<br>" +
 					"							( 	<select name='busstoptime'>" +
+					"									<option value='right there!' "+ busstoptime0 +">right there!</option>" +
 					"									<option value='under 5 min' "+ busstoptime5 +"><5 min</option>" +
-					"									<option value='5~10 min' "+ busstoptime10 +">5~10min</option>" +
-					"									<option value='10~15 min' "+ busstoptime15 +">10~15min</option>" +
+					"									<option value='5~10 min' "+ busstoptime10 +">5~10 min</option>" +
+					"									<option value='10~15 min' "+ busstoptime15 +">10~15 min</option>" +
 					"								</select> )" +
 					"							<dd>English Stop Name:<br><input type=text name=busstopname size=12 value="+busstopname+">" +
 					"							<br>Japanese Stop Name:<br><input type=text name=busstopname_j size=12 value= " + busstopname_j +"></dd> " +
 					"						<td><input id=closesuper type='checkbox' name='close' value='Supermarket'" + closesuper + ">Supermarket " +
 					"							<br>( 	<select name='supermarkettime'>" +
+					"									<option value='right there!' "+ supermarkettime0 +"><right there!</option>" +
 					"									<option value='under 5 min' "+ supermarkettime5 +"><5 min</option>" +
-					"									<option value='5~10 min' "+ supermarkettime10 +">5~10min</option>" +
-					"									<option value='10~15 min' "+ supermarkettime15 +">10~15min</option>" +
+					"									<option value='5~10 min' "+ supermarkettime10 +">5~10 min</option>" +
+					"									<option value='10~15 min' "+ supermarkettime15 +">10~15 min</option>" +
 					"								</select> )<br> " +
 					"							<input id=closeconenience type='checkbox' name='close' value='Convenience Store' " + closeconvenience + ">Convenience Store " +
 					"							<br>(  <select name='conveniencestoretime'>" +
+					"									<option value='right there!' "+ conveniencestoretime0 +"><right there!</option>" +
 					"									<option value='under 5 min' "+ conveniencestoretime5 +"><5 min</option>" +
 					"									<option value='5~10 min' "+ conveniencestoretime10 +">5~10min</option>" +
 					"									<option value='10~15 min' "+ conveniencestoretime15 +">10~15min</option>" +
 					"								</select> )<br> " +
 					"							<input id=closerestaurant type='checkbox' name='close' value='Restaurant/Cafe'" + closerestaurant + ">Restaurant/Cafe " +
 					"							<br>( 	<select name='restauranttime'>" +
+					"									<option value='right there!' "+ restauranttime0 +"><right there!</option>" +
 					"									<option value='under 5 min' "+ restauranttime5 +"><5 min</option>" +
 					"									<option value='5~10 min' "+ restauranttime10 +">5~10min</option>" +
 					"									<option value='10~15 min' "+ restauranttime15 +">10~15min</option>" +
 					"								</select> )<br> " +
 					"							<input id=closepost type='checkbox' name='close' value='Post Office (with ATM)'" + closepost + ">Post Office (ATM) " +
 					"							<br>( 	<select name='posttime'>" +
+					"									<option value='right there!' "+ posttime0 +"><right there!</option>" +
 					"									<option value='under 5 min' "+ posttime5 +"><5 min</option>" +
 					"									<option value='5~10 min' "+ posttime10 +">5~10min</option>" +
 					"									<option value='10~15 min' "+ posttime15 +">10~15min</option>" +
